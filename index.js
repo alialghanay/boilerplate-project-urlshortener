@@ -12,7 +12,6 @@ const findURL = require('./shcema').findURL;
 const findurlbyId = require('./shcema').findurlbyId;
 const findurlTheId = require('./shcema').findurlTheId;
 // Basic Configuration
-const port = process.env.PORT || 3000;
 
 app.use(cors());
 // forntend middelware
@@ -97,6 +96,6 @@ app.get('/api/shorturl/:id', (req, res) => {
   })  
 })
 
-app.listen(port, function() {
-  console.log(`Listening on port ${port}`);
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
