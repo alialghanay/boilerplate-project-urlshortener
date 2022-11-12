@@ -48,7 +48,7 @@ app.get('/', function(req, res) {
 // database conncation
 
 
-mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://alialghanay:03541514@cluster.qdcdggp.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 // Your first API endpoint
